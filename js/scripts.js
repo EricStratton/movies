@@ -1,5 +1,7 @@
 // User Interface logic
-
+$(document).ready (function(event) {
+  event.preventDefault();
+  $("form#-").submit(function()) {
 
 const inputtedMovieName = parseInt($("").val());
 const inputtedAge = parseInt($("").val());
@@ -12,20 +14,21 @@ let score = add(inputtedMovieName, inputtedAge, inputtedTimeOfDay);
 
 
 //Business Logic
-function Tickets (movieName, age, timeOfDay) {
-  this.movieName = movieName;
-  this.age = age;
-  this.timeOfDay = timeOfDay;
 }
+  function Tickets (movieName, age, timeOfDay) {
+    this.movieName = movieName;
+    this.age = age;
+    this.timeOfDay = timeOfDay;
+  }
 
-Tickets.prototype.printReceipt = function () {
-  return this.movieName + " " + this.age + " " + this.timeOfDay + this.price;
-}
+  Tickets.prototype.printReceipt = function () {
+    return this.movieName + " " + this.age + " " + this.timeOfDay + this.price;
+  }
 
 
-function add(inputtedMovieName, inputtedAge, inputtedTimeOfDay) {
-  return inputtedMovieName + inputtedAge + inputtedTimeOfDay;
-};
+  function add(inputtedMovieName, inputtedAge, inputtedTimeOfDay) {
+    return inputtedMovieName + inputtedAge + inputtedTimeOfDay;
+  };
 
 
 
