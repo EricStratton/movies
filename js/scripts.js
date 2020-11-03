@@ -16,15 +16,6 @@ function add(inputtedMovieName, inputtedAge, inputtedTimeOfDay) {
     return inputtedMovieName + inputtedAge + inputtedTimeOfDay;
 };
 
-if (.score <= 8 && .score > 4) {
-  #show;
-} else if {
- (.score <=4)
- #show
-} else if {
-  (.score )
-}
-
 // User Interface Logic //
 
 $(document).ready (function() {
@@ -32,13 +23,23 @@ $(document).ready (function() {
     event.preventDefault();
     
 const inputtedMovieName = parseInt($("#movieNames").val());
-const inputtedAge = parseInt($("input[name='ageInput']:checked").val());
+const inputtedAge = $("input[name='ageInput']:checked").val();
 const inputtedTimeOfDay = parseInt($("#times").val());
 
 
 
 let newMovieTicket = new Tickets(inputtedMovieName, inputtedAge, inputtedTimeOfDay);
 let score = add(inputtedMovieName, inputtedAge, inputtedTimeOfDay);
+
+if (score <= 4 && inputtedAge === "grownfolk") {
+  $("#price1").show();   
+} else if (score <=4 && inputtedAge === "ew") { 
+  $("#price2").show();
+} else if (score <= 4 && inputtedAge === "old") {
+  $("#price3").show();
+} else {
+  $("#price4").show();
+}
+
   }); 
 });
-
