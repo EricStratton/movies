@@ -12,8 +12,8 @@ Tickets.prototype.printReceipt = function () {
 }
 
 
-function add(inputtedMovieName, inputtedAge, inputtedTimeOfDay) {
-    return inputtedMovieName + inputtedAge + inputtedTimeOfDay;
+function add(inputtedMovieName, inputtedTimeOfDay) {
+    return inputtedMovieName + inputtedTimeOfDay;
 };
 
 // User Interface Logic //
@@ -29,16 +29,24 @@ const inputtedTimeOfDay = parseInt($("#times").val());
 
 
 let newMovieTicket = new Tickets(inputtedMovieName, inputtedAge, inputtedTimeOfDay);
-let score = add(inputtedMovieName, inputtedAge, inputtedTimeOfDay);
+let score = add(inputtedMovieName, inputtedTimeOfDay);
 
 if (score <= 4 && inputtedAge === "grownfolk") {
-  $("#price1").show();   
+  //$("#price1").show();
+  $(".priceOutput").remove();
+  $("#price").append("<p class='priceOutput'>Your ticket will cost $X!</p>");
 } else if (score <=4 && inputtedAge === "ew") { 
-  $("#price2").show();
+  //$("#price2").show();
+  $(".priceOutput").remove();
+  $("#price").append("<p class='priceOutput'>Your ticket will cost $Y!</p>");
 } else if (score <= 4 && inputtedAge === "old") {
-  $("#price3").show();
+  //$("#price3").show();
+  $(".priceOutput").remove();
+  $("#price").append("<p class='priceOutput'>Your ticket will cost $Z!</p>");
 } else {
-  $("#price4").show();
+  //$("#price4").show();
+  $(".priceOutput").remove();
+  $("#price").append("<p class='priceOutput'>Your ticket will be FREE!</p>");
 }
 
   }); 
