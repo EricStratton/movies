@@ -34,15 +34,15 @@ let score = add(inputtedMovieName, inputtedTimeOfDay);
 if (score <= 4 && inputtedAge === "grownfolk") {
   //$("#price1").show();
   $(".priceOutput").remove();
-  $("#price").append("<p class='priceOutput'>Your ticket will cost $X!</p>");
+  $("#price").append("<p class='priceOutput'>Your ticket will cost $12!</p>");
 } else if (score <=4 && inputtedAge === "ew") { 
   //$("#price2").show();
   $(".priceOutput").remove();
-  $("#price").append("<p class='priceOutput'>Your ticket will cost $Y!</p>");
+  $("#price").append("<p class='priceOutput'>Your ticket will cost $10!</p>");
 } else if (score <= 4 && inputtedAge === "old") {
   //$("#price3").show();
   $(".priceOutput").remove();
-  $("#price").append("<p class='priceOutput'>Your ticket will cost $Z!</p>");
+  $("#price").append("<p class='priceOutput'>Your ticket will cost $8!</p>");
 } else {
   //$("#price4").show();
   $(".priceOutput").remove();
